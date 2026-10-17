@@ -1,0 +1,41 @@
+/* AS Computer - print.css */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+  }
+  
+  .app-header, .nav-bar, .no-print, button, .btn {
+    display: none !important;
+  }
+  
+  .main-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .card {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    padding: 0.5cm !important;
+  }
+  
+  .table th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
+  }
+  
+  .table td {
+    color: #000 !important;
+    border-bottom: 1px solid #eee !important;
+  }
+  
+  .printable-voucher {
+    width: 100%;
+    page-break-inside: avoid;
+  }
+}

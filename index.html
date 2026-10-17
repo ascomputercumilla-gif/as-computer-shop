@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AS Computer - Shop Management</title>
+  
+  <!-- PWA Manifest & Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b0f19">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Ultra-fast offline-first shop management for AS Computer, Cumilla">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+  <!-- Application Shell Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="brand-logo">AS</div>
+      <div class="brand-title">AS Computer</div>
+    </div>
+    <div class="header-status-area">
+      <span id="sync-badge" class="badge badge-queue" style="display: none;">Sync: 0</span>
+      <span id="network-badge" class="badge badge-online">
+        <span style="width:6px; height:6px; border-radius:50%; background:var(--status-success);"></span> Online
+      </span>
+      <button class="btn btn-secondary btn-sm" onclick="Sync.syncOutbox()" title="Force Sync">🔄</button>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-item active" data-tab="dashboard" onclick="Router.navigate('dashboard')">📊 Dashboard</div>
+    <div class="nav-item" data-tab="sales" onclick="Router.navigate('sales')">🧾 Sales Memo</div>
+    <div class="nav-item" data-tab="products" onclick="Router.navigate('products')">📦 Products</div>
+    <div class="nav-item" data-tab="customers" onclick="Router.navigate('customers')">👥 Customers</div>
+    <div class="nav-item" data-tab="payments" onclick="Router.navigate('payments')">💳 Due Collection</div>
+    <div class="nav-item" data-tab="purchases" onclick="Router.navigate('purchases')">📥 Purchases</div>
+    <div class="nav-item" data-tab="expenses" onclick="Router.navigate('expenses')">💸 Expenses</div>
+    <div class="nav-item" data-tab="cash-closing" onclick="Router.navigate('cash-closing')">💼 Daily Cash Closing</div>
+    <div class="nav-item" data-tab="reports" onclick="Router.navigate('reports')">📈 Reports</div>
+  </nav>
+
+  <!-- Mount Point for Views -->
+  <main class="main-content" id="main-view"></main>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Modular Scripts Loaded in Exact Dependency Order -->
+  <script src="js/utils.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/cache.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/offline.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/sales.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/customers.js"></script>
+  <script src="js/payments.js"></script>
+  <script src="js/purchases.js"></script>
+  <script src="js/expenses.js"></script>
+  <script src="js/cash-closing.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
