@@ -2,7 +2,7 @@
  * AS Computer - service-worker.js
  * Offline-first PWA caching strategy
  */
-const CACHE_NAME = "as-computer-v2.0.0";
+const CACHE_NAME = "as-computer-v2.0.1";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
